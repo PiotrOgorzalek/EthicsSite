@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<!--
+	Striped by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ENU Student Ethics Resource</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://unpkg.com/vue"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/x-template" id="modal-template">
+      <transition name="modal">
+        <div class="modal-mask">
+          <div class="modal-wrapper">
+            <div class="modal-container">
+
+              <div class="modal-header">
+                <slot name="header">
+
+                </slot>
+              </div>
+
+              <div class="modal-body">
+                <slot name="body">
+
+                </slot>
+              </div>
+
+              <div class="modal-footer">
+                <slot name="footer">
+                  <button class="modal-default-button" @click="$emit('close')">
+                    Login
+                  </button>
+                </slot>
+              </div>
+            </div>
+          </div>
+        </div>
+      </transition>
+    </script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Content -->
+			<div id="content">
+				<div class="inner">
+
+					<!-- Post -->
+						<article class="box post post-excerpt">
+							<header>
+								<!--
+									Note: Titles and subtitles will wrap automatically when necessary, so don't worry
+									if they get too long. You can also remove the <p> entirely if you don't
+									need a subtitle.
+								-->
+								<h2>Napier Ethics</h2>
+								<p></p>
+							</header>
+							<p>
+								Can be filled with further information
+							</p>
+						</article>
+				</div>
+			</div>
+
+		<!-- Sidebar -->
+			<div id="sidebar">
+
+				<!-- Logo -->
+					<h1 id="logo"><a href="index.html"><img src ="images/logo.png"></a></h1>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="initial assessment.html">Start app process</a></li>
+							<li><a href="resume application.html">Resume Application</a></li>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="staff.html">Staff</a></li>
+							<li><a href="admin.html">Admin</a></li>
+							<li>
+							<div id="app">
+					      <a id="show-modal" @click="showModal = true">Login</a>
+					      <!-- use the modal component, pass in the prop -->
+					      <modal v-if="showModal" @close="showModal = false">
+					        <!--
+					      you can use custom content here to overwrite
+					      default content
+					    -->
+					        <h3 slot="header">Login</h3>
+									<p slot="body"><input v-model="userName" placeholder="Username Here"></p>
+									<p slot="body"><input v-model="password" placeholder="Password Here"></p>
+					      </modal>
+					    </div>
+
+					    <script>
+					      // register modal component
+					      Vue.component("modal", {
+					        template: "#modal-template"
+					      });
+
+					      // start app
+					      new Vue({
+					        el: "#app",
+					        data: {
+					          showModal: false
+					        }
+					      });
+					    </script>
+							</li>
+						</ul>
+					</nav>
+
+
+
+
+
+				<!-- Copyright -->
+					<ul id="copyright">
+						<li>&copy; Napier University</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="https://unpkg.com/vue@next"></script> <!-- import vue.js -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
