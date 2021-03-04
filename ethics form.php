@@ -1,5 +1,7 @@
 <?php
 	session_start();
+	//testing only just to coope with saving file on server 
+	$_SESSION['id'] = 1;
 ?>
 
 <!DOCTYPE HTML>

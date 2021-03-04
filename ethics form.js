@@ -474,7 +474,19 @@ var json = {
 };
 
 window.survey = new Survey.Model(json);
+survey.onComplete.add(function (sender, options) {
+  //var user_id = <?php echo $user_id?>;
+  var xhr = new XMLHttpRequest();
+  var changed = JSON.stringify(sender.data);
+  xhr.open("POST", "submit.php",true);
+  console.log(changed);
+  xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+  xhr.send(changed);
+  
+  
+});
 
+//just for testing NEED TO BE DELETED IN FULL VERSION!!!!!!
 survey
     .onComplete
     .add(function (result) {
