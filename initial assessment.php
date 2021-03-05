@@ -46,7 +46,7 @@
 			        <div id="surveyResult"></div>
 							<div id="footer">
 								<p id="finalMessage"></p>
-								<button id="continueButton" onclick="location.href='./ethics form.php'" type="button">Continue</button>
+								<button id="continueButton" onclick="location.href='./create user.php'" type="button">Continue</button>
 							</div>
 						</article>
 

@@ -31,20 +31,21 @@
 									if they get too long. You can also remove the <p> entirely if you don't
 									need a subtitle.
 								-->
-								<h2>Resume Application</h2>
+								<h2>Create a User Account</h2>
 							</header>
-							<div id="application">
+							<p>In order to complete the application you are required to make an account. Please insert your desired username and password in the relevant box.</p>
+							<div id="addUser"> <!-- Div used to store form for user creation -->
 								<div class="col-md-4 col-md-offset-4">
 
 									<div class="panel panel-primary">
 											<div class="panel-heading"><span class="glyphicon glyphicon-lock"></span></div>
 											<div class="panel-body">
-												<label>Application ID:</label><input type="text" class="form-control" v-model="application.appID" v-on:keyup="keymonitor">
-												<label>User ID:</label><input type="text" class="form-control" v-model="application.userID" v-on:keyup="keymonitor">
+												<label>Username:</label><input type="text" class="form-control" v-model="userDetails.username" v-on:keyup="keymonitor"> <!-- Input box for username -->
+												<label>Password:</label><input type="text" class="form-control" v-model="userDetails.password" v-on:keyup="keymonitor"> <!-- Input box for password -->
 											</div>
 											<div class="panel-footer">
 												<p></p>
-												<button @click="checkDetails();"><span class="glyphicon glyphicon-log-in"></span>Submit</button>
+												<button @click="checkDetails();"><span class="glyphicon glyphicon-log-in"></span>Create Account</button>  <!-- Submit button that executes the checkDetails() function in createUserApp.js -->
 												<p></p>
 											</div>
 									</div>
@@ -98,7 +99,7 @@
 		<!-- Scripts -->
 			<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-			<script src="resumeApp.js"></script>
+			<script src="createUserApp.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>

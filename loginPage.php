@@ -98,7 +98,7 @@
 		<!-- Scripts -->
 			<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-			<script src="app.js"></script>
+			<script src="loginApp.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>

@@ -72,7 +72,7 @@
 					    </div>
 							<p></p>
 							<form action="add supervisor.php">
-						    <input type="submit" value="Add Supervisor" />
+						    <input type="submit" value="Add Supervisor"/>
 							</form>
 
 					    <script>

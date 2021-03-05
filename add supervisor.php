@@ -33,7 +33,35 @@
 								-->
 								<h2>Add a New Supervisor</h2>
 							</header>
-							<p>Insert content here</p>
+							<div id="addSupervisor"> <!-- Div used to store the form for adding a supervisor -->
+								<div class="col-md-4 col-md-offset-4">
+
+									<div class="panel panel-primary">
+											<div class="panel-heading"><span class="glyphicon glyphicon-lock"></span>Insert Supervisor Details</div>
+											<div class="panel-body">
+												<label>Supervisor Name:</label><input type="text" class="form-control" v-model="supervisorDetails.superName" v-on:keyup="keymonitor"> <!-- Text input to allow for the insertion of a supervisor name -->
+												<label>Supervisor Email:</label><input type="text" class="form-control" v-model="supervisorDetails.superEmail" v-on:keyup="keymonitor"> <!-- Text input to allow for the insertion of a supervisor email -->
+												<label>Supervisor Password:</label><input type="text" class="form-control" v-model="supervisorDetails.superPass" v-on:keyup="keymonitor"> <!-- Password input to allow for the insertion of a password-->
+											</div>
+											<div class="panel-footer">
+												<p></p>
+												<button @click="checkDetails();"><span class="glyphicon glyphicon-log-in"></span>Add Supervisor</button> <!-- Button to allow submission of the form -->
+												<p></p>
+											</div>
+									</div>
+
+									<div class="alert alert-danger text-center" v-if="errorMessage">
+										<button type="button" class="close" @click="clearMessage();"><span aria-hidden="true">&times;</span></button>
+										<span class="glyphicon glyphicon-alert"></span> {{ errorMessage }}
+									</div>
+
+									<div class="alert alert-success text-center" v-if="successMessage">
+										<button type="button" class="close" @click="clearMessage();"><span aria-hidden="true">&times;</span></button>
+										<span class="glyphicon glyphicon-check"></span> {{ successMessage }}
+									</div>
+
+								</div>
+							</div>
 						</article>
 				</div>
 			</div>
@@ -71,7 +99,7 @@
 		<!-- Scripts -->
 			<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-			<script src="app.js"></script>
+			<script src="addSupervisorApp.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>

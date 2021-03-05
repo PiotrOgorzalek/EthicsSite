@@ -113,7 +113,7 @@ survey.onComplete.add(function (result) {
 				} else if (document.getElementById('surveyResult').textContent.includes('"q7": true' || '"q8": true' || '"q9": true' || '"q10": true' || '"q11: true' || '"q12": true' || '"q13": true')) {
 					var t = document.createTextNode('Your project is "high risk" and as such you will need to contact your supervisor as you may need to complete a full ethics review through the SoC Committee.');
 				} else {
-					var t = document.createTextNode('Your project is "low risk" and as such you will need to complete the self assessment on this website. Please press the button below to continue.');
+					var t = document.createTextNode('Your project is "low risk" and as such you will need to complete the self assessment on this website. Please press the button below to create an account.');
 					document.getElementById('continueButton').style.display = "block";
 				}
 				document.getElementById('finalMessage').appendChild(t);
