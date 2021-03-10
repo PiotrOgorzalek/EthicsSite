@@ -45,7 +45,7 @@
 											</div>
 											<div class="panel-footer">
 												<p></p>
-												<button @click="checkDetails();clearMessage();"><span class="glyphicon glyphicon-log-in"></span>Create Account</button>  <!-- Submit button that executes the checkDetails() function in createUserApp.js -->
+												<button @click="checkDetails();clearMessage();"><span class="glyphicon glyphicon-log-in"></span>Create Account</button>  <!-- Submit button that executes the checkDetails() function in createUserApp.js added clear message function to clear window-->
 												<p></p>
 											</div>
 									</div>
