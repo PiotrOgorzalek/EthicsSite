@@ -33,19 +33,19 @@
 								-->
 								<h2>Create a User Account</h2>
 							</header>
-							<p>In order to complete the application you are required to make an account. Please insert your desired username and password in the relevant box.</p>
+							<p>In order to complete the application you are required to make an account. Please insert your desired email and password in the relevant box.</p>
 							<div id="addUser"> <!-- Div used to store form for user creation -->
 								<div class="col-md-4 col-md-offset-4">
 
 									<div class="panel panel-primary">
 											<div class="panel-heading"><span class="glyphicon glyphicon-lock"></span></div>
 											<div class="panel-body">
-												<label>Username:</label><input type="text" class="form-control" v-model="userDetails.username" v-on:keyup="keymonitor"> <!-- Input box for username -->
+												<label>Email:</label><input type="text" class="form-control" v-model="userDetails.email" v-on:keyup="keymonitor"> <!-- Input box for email -->
 												<label>Password:</label><input type="text" class="form-control" v-model="userDetails.password" v-on:keyup="keymonitor"> <!-- Input box for password -->
 											</div>
 											<div class="panel-footer">
 												<p></p>
-												<button @click="checkDetails();"><span class="glyphicon glyphicon-log-in"></span>Create Account</button>  <!-- Submit button that executes the checkDetails() function in createUserApp.js -->
+												<button @click="checkDetails();clearMessage();"><span class="glyphicon glyphicon-log-in"></span>Create Account</button>  <!-- Submit button that executes the checkDetails() function in createUserApp.js -->
 												<p></p>
 											</div>
 									</div>

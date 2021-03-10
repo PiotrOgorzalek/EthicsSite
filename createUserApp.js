@@ -3,7 +3,7 @@ var app = new Vue({
 	data:{
 		successMessage: "",
 		errorMessage: "",
-		userDetails: {username: '', password: ''},
+		userDetails: {email: '', password: ''},
 	},
 
 	methods:{
@@ -23,9 +23,9 @@ var app = new Vue({
 					}
 					else{ // On success user will be redirected to the ethics form page
 						app.successMessage = response.data.message;
-						app.userDetails = {username: '', password: ''};
+						app.userDetails = {email: '', password: ''};
 						setTimeout(function(){
-							//window.location.href="ethics form.php";
+							window.location.href="ethics form.php";
 						},2000);
 					}
 				});
